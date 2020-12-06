@@ -22,6 +22,10 @@ public class BeanScopeDemoApp {
         System.out.println("\nMemory location for theCoach: " + theCoach);
         System.out.println("\nMemory location for alphaCoach: " + alphaCoach);
 
+        // get a annotation based bean
+        Coach myTennisCoach = context.getBean("thatSillyCoach", TennisCoach.class);
+        System.out.println(myTennisCoach.getDailyFortune());
+
         // close the context
         context.close();
     }
